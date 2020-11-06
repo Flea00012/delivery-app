@@ -1,4 +1,5 @@
 //react core
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 //import styles
@@ -15,18 +16,18 @@ export default function Nav() {
   };
 
   return (
-    <nav >
-     
-      <ul className="nav-links">
-        <Link to="/home" >
+    <nav>
+      <h3> Logo </h3>
+      <ul >
+        <Link  to="/home">
           <li>Home</li>
         </Link>
 
-        <Link to="/login">
+        <Link  to="/login">
           <li>Login</li>
         </Link>
 
-        <Link to="/signup">
+        <Link  to="/signup">
           <li>Sign Up</li>
         </Link>
       </ul>

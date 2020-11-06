@@ -1,8 +1,9 @@
 //react core
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 //import styles
-import '../../css/styles.css';
+import styles from .
 
 //import components
 import Home from '../../components/pages/Home.jsx';
@@ -15,18 +16,18 @@ export default function Nav() {
   };
 
   return (
-    <nav >
-     
-      <ul className="nav-links">
-        <Link to="/home" >
+    <nav>
+      <h3> Logo </h3>
+      <ul>
+        <Link style={navStyle} to="/home">
           <li>Home</li>
         </Link>
 
-        <Link to="/login">
+        <Link style={navStyle} to="/login">
           <li>Login</li>
         </Link>
 
-        <Link to="/signup">
+        <Link style={navStyle} to="/signup">
           <li>Sign Up</li>
         </Link>
       </ul>

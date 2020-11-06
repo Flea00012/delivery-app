@@ -15,9 +15,9 @@ export default function Nav() {
   };
 
   return (
-    <nav >
-     
-      <ul className="nav-links">
+    <nav className="nav-links">
+      <h3> Logo </h3>
+      <ul >
         <Link to="/home" >
           <li>Home</li>
         </Link>

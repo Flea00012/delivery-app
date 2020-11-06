@@ -15,10 +15,10 @@ export default function Nav() {
   };
 
   return (
-    <nav >
-     
+    <nav>
+      <h3> Logo </h3>
       <ul className="nav-links">
-        <Link to="/home" >
+        <Link to="/home">
           <li>Home</li>
         </Link>
 
