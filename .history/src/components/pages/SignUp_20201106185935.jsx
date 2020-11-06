@@ -1,4 +1,4 @@
-import image from '../../artwork/7028de95-3f1c-4817-ac8e-846941592c57_200x200.png';
+import image from '../../artwork/';
 import '../../css/styles.css';
 
 export default function Login() {

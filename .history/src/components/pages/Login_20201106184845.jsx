@@ -1,30 +1,7 @@
-import React, { useState, useEffect } from 'react';
-
-import logo from '../../artwork//markus-spiske-BPxkU4uPq6Y-unsplash.jpg';
-import '../../css/styles.css';
-
-export default function Home() {
-  //custom hook from useState and useEffect hooks
-  useEffect(() => {
-    fetchItems();
-  }, []);
-
-  const [items, setItems] = useState([]);
-
-  const fetchItems = async () => {
-    const data = await fetch(
-      '/Users/leefowler/Documents/VSCode/SDA8-webdev/reactsda/delivery-app/src/data/data.json'
-    );
-
-    const items = await data.json();
-  
-    console.log(items);
-
-    return setItems(items);
-  };
-
+export default function Login() {
   return (
     <>
+      <div>Login Page</div>;
       <div className="pageStyle">
         <p> Welcome to Express Delivery </p>
 

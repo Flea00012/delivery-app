@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import logo from '../../artwork//markus-spiske-BPxkU4uPq6Y-unsplash.jpg';
+import logo from '../../artwork//';
 import '../../css/styles.css';
 
 export default function Home() {
@@ -17,7 +17,6 @@ export default function Home() {
     );
 
     const items = await data.json();
-  
     console.log(items);
 
     return setItems(items);
