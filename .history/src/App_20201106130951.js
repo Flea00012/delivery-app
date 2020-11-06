@@ -9,7 +9,6 @@ import Nav from './components/molecules/Nav.jsx';
 function App() {
   return (
     <d>
-      <Nav />
       <Home />
     </d>
   );
