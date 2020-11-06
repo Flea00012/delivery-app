@@ -20,7 +20,7 @@ export default function Home() {
 
     console.log(items);
 
-    setItems(items);
+    gitsetItems(items);
   };
 
   return (
