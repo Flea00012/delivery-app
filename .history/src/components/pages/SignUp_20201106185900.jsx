@@ -1,10 +1,11 @@
-import image from '../../artwork/7028de95-3f1c-4817-ac8e-846941592c57_200x200.png';
+import image from '../../artwork/markus-spiske-BPxkU4uPq6Y-unsplash.jpg';
 import '../../css/styles.css';
 
 export default function Login() {
   return (
     <>
       <div>Sign Up Page title</div>
+      <div>Login Page</div>
       <div className="pageStyle">
         <p> Welcome to Express Delivery </p>
         <p>

@@ -17,7 +17,6 @@ export default function Home() {
     );
 
     const items = await data.json();
-  
     console.log(items);
 
     return setItems(items);

@@ -1,10 +1,11 @@
-import image from '../../artwork/7028de95-3f1c-4817-ac8e-846941592c57_200x200.png';
+import image from '../../artwork/markus-spiske-BPxkU4uPq6Y-unsplash.jpg';
 import '../../css/styles.css';
 
 export default function Login() {
   return (
     <>
       <div>Sign Up Page title</div>
+      <div>Login Page</div>
       <div className="pageStyle">
         <p> Welcome to Express Delivery </p>
         <p>
@@ -18,8 +19,11 @@ export default function Login() {
           alt="a package is delivered to the client "
         />
         <p> Please enter your name and phone number to login</p>
-        <input placeholder="name" /> <input placeholder="phone number" /> <></>
-        <input placeholder="address" />
+        <input placeholder="name" /> <input placeholder="phone number" />{' '}
+
+        <></>
+
+        <input placeholder="add" /> <input placeholder="phone number" />{' '}
         <div></div>
       </div>
     </>
