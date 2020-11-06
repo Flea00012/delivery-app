@@ -18,7 +18,7 @@ function App() {
         <Nav />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/home" component={Home} />
+          <Route path="/home"  component={Home} />
           <Route path="/signup" component={SignUp} />
           <Route path="/login" component={Login} />
         </Switch>

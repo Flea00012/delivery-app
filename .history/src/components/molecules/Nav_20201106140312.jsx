@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Home from '../../components/pages/Home.jsx';
 import Login from '../pages/Login';
 
-//navigation bar component
+//navigation bar comp
 export default function Nav() {
   const navStyle = {
     color: 'black',
@@ -24,8 +24,8 @@ export default function Nav() {
           <li>Login</li>
         </Link>
 
-        <Link style={navStyle} to="/signup">
-          <li>Sign Up</li>
+        <Link style={navStyle} to="/login">
+          <li>Login</li>
         </Link>
       </ul>
     </nav>

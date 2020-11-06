@@ -25,7 +25,7 @@ export default function Nav() {
         </Link>
 
         <Link style={navStyle} to="/signup">
-          <li>Sign Up</li>
+          <li>Login</li>
         </Link>
       </ul>
     </nav>
