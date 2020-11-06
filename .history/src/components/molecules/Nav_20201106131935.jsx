@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from '../../components/pages/Home.jsx';
-import Login from '../pages/Login';
+import { Home } from '../pages'
 
 export default function Nav() {
   return (
@@ -10,7 +9,6 @@ export default function Nav() {
       </Route>
       <Switch>
         <Home />
-        <Login />
       </Switch>
     </Router>
   );

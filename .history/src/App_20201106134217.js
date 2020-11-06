@@ -15,7 +15,7 @@ function App() {
       <Router>
         <div>Nav Bar title</div>
         <Route></Route>
-        <Nav />
+        <Nav
         <Switch>
           <Home to="/" exact component={Home} />
           <Login to="/login" component={Login} />

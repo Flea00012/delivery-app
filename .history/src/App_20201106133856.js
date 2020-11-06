@@ -1,6 +1,5 @@
 //react core modules
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // import { useState } from 'react';
 
@@ -12,15 +11,15 @@ import Login from './components/pages/Login.jsx';
 function App() {
   return (
     <>
-      <Router>
-        <div>Nav Bar title</div>
-        <Route></Route>
-        <Nav />
-        <Switch>
-          <Home to="/" exact component={Home} />
-          <Login to="/login" component={Login} />
-        </Switch>
-      </Router>
+    <Router>
+    <Route>
+      <div>Nav Bar</div>
+    </Route>
+    <Switch>
+      <Home />
+      <Login />
+    </Switch>
+  </Router>
     </>
   );
 }

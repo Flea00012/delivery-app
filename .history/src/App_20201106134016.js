@@ -12,15 +12,16 @@ import Login from './components/pages/Login.jsx';
 function App() {
   return (
     <>
-      <Router>
-        <div>Nav Bar title</div>
-        <Route></Route>
-        <Nav />
-        <Switch>
-          <Home to="/" exact component={Home} />
-          <Login to="/login" component={Login} />
-        </Switch>
-      </Router>
+    <Router>
+    <div>Nav Bar title</div>
+    <Route>
+      
+    </Route>
+    <Switch>
+      <Home />
+      <Login />
+    </Switch>
+  </Router>
     </>
   );
 }

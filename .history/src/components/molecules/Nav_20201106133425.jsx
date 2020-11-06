@@ -10,7 +10,6 @@ export default function Nav() {
       </Route>
       <Switch>
         <Home />
-        <Login />
       </Switch>
     </Router>
   );

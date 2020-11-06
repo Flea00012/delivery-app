@@ -15,10 +15,9 @@ function App() {
       <Router>
         <div>Nav Bar title</div>
         <Route></Route>
-        <Nav />
         <Switch>
-          <Home to="/" exact component={Home} />
-          <Login to="/login" component={Login} />
+          <Home to='/' exact component= {Home}/>
+          <Login to='/login'/>
         </Switch>
       </Router>
     </>
