@@ -18,7 +18,6 @@ nav{
   min-height: 10px;
   top: 0px;
   font-size: 20px;
-  width: 100%;
 
 
 }
@@ -36,7 +35,7 @@ nav{
 .pageStyle{
   font: Lato;
   background-color: #63C5DA;
-  height: fit-content;
+  height: ft;
   width: 100%;
   padding: 20px;
 
@@ -95,7 +94,7 @@ h5 {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 

@@ -1,9 +1,5 @@
 //react core
-
 import { fetchPackages } from '../molecules/fetchPackages';
-
-import { fetchPackages } from '../molecules/CardReader';
-
 import { useEffect, useState, useRef } from 'react';
 
 //import styles and pictures
@@ -63,35 +59,26 @@ export default function Home() {
 
         <p>
           {' '}
-          If you are expecting a delivery please enter your name and click the
-          display packages button{' '}
+          If you are expecting a delivery please enter your package ID and click
+          "find"{' '}
         </p>
         <img
           className="picture"
           src={logo}
           alt="a logo for the transport company called express delivery"
         />
-        <p> Please enter the name of the package owner </p>
-        <input ref={inputPackageRef} placeholder="try Jhon Doe" />
+        <p> Please enter your package ID below </p>
+        <input ref={inputPackageRef} placeholder="packageID" />
         <button
           className="button"
           onClick={() => {
             const pID = inputPackageRef.current.value;
             setPackageID(pID);
           }}
-        >
-          {' '}
-          display packages{' '}
-        </button>
+        />
 
         <div>
-
-          <p>Packages will be displayed here: </p>
-
-          <h4x>Searching for your package, please be patient.</h4x>
-
-          <h4>We are searching for your package, please be patient</h4>
-
+          <p>We are searching for your package, please be patient</p>
           {status === 0 ? <p>Loading...</p> : null}
           {status === 1 &&
             information &&
@@ -100,11 +87,11 @@ export default function Home() {
                 <div key={item.id}>
                   {`Package status is ${item.status}
                    and its location is ${item.location_name}
-                    and time of delivery is ${item.eta} with a waybill number of ${item.id}`}
+                    and time of delivery is ${item.eta} wi`}
                 </div>
               );
             })}
-          {status === 2 ? <p>Sorry we cannot find your package</p> : null}
+          {status === 2 ? <p>Sorry we cannot find that package</p> : null}
         </div>
       </div>
     </>

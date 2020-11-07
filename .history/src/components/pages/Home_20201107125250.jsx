@@ -1,9 +1,5 @@
 //react core
-
 import { fetchPackages } from '../molecules/fetchPackages';
-
-import { fetchPackages } from '../molecules/CardReader';
-
 import { useEffect, useState, useRef } from 'react';
 
 //import styles and pictures
@@ -63,8 +59,8 @@ export default function Home() {
 
         <p>
           {' '}
-          If you are expecting a delivery please enter your name and click the
-          display packages button{' '}
+          If you are expecting a delivery please enter your name and click
+          the display packages button{' '}
         </p>
         <img
           className="picture"
@@ -85,13 +81,7 @@ export default function Home() {
         </button>
 
         <div>
-
           <p>Packages will be displayed here: </p>
-
-          <h4x>Searching for your package, please be patient.</h4x>
-
-          <h4>We are searching for your package, please be patient</h4>
-
           {status === 0 ? <p>Loading...</p> : null}
           {status === 1 &&
             information &&
@@ -104,7 +94,7 @@ export default function Home() {
                 </div>
               );
             })}
-          {status === 2 ? <p>Sorry we cannot find your package</p> : null}
+          {status===1 status === 2 ? <p>Sorry we cannot find that package</p> : null}
         </div>
       </div>
     </>
