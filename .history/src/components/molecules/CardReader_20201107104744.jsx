@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Card from './Card';
 
+//function fetchPackages() is used to do all the fetching of the data only
 export async function fetchPackages(endpoint) {
   try {
     // Make fetch request to obtain info frmo the endpoint URL address
@@ -10,15 +11,13 @@ export async function fetchPackages(endpoint) {
     // Once the information is downloaded we transformed it to json
     const data = await response.json();
 
-    // Once the information is transformed to json we put it into our hooks
-
-    // Once we have the information in the hook we give the ok! to change the status
     return data;
   } catch (err) {
     throw err;
   }
 }
 
+// function comparator is used to 
 export function comparator(dataArray, value) {
   return dataArray.filter((a) => a === value);
 }
