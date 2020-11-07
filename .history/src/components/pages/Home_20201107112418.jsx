@@ -64,9 +64,11 @@ export default function Home() {
         />
 
         <div>
-          <h4x>Searching for your package, please be patient.</h4x>
 
+          <h4x>Searching for your package, please be patient.</h4x>
+=======
           <h4>We are searching for your package, please be patient</h4>
+
           {status === 0 ? <p>Loading...</p> : null}
           {status === 1 &&
             information &&
