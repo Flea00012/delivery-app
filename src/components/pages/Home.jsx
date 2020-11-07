@@ -1,8 +1,8 @@
 //react core
-
 import { fetchPackages } from '../molecules/fetchPackages';
 
 import { fetchPackages } from '../molecules/CardReader';
+
 
 import { useEffect, useState, useRef } from 'react';
 
@@ -15,35 +15,27 @@ export default function Home() {
   //all the hooks for the data
   const [status, setStatus] = useState(0);
   const [information, setInformation] = useState([]);
-  const [packageID, setPackageID] = useState(null);
-  const inputPackageRef = useRef();
+  const [user, setUser] = useState(null);
+  const inputUser = useRef();
 
   //note status 0: means loading data, status 1: means data found, status 2: means data not found
   useEffect(() => {
     async function fetchData() {
       try {
         setStatus(0);
-        console.log(packageID);
+        console.log(user);
         const endpoint = 'https://my.api.mockaroo.com/orders.json?key=e49e6840';
-
-        // const endpoint =
-        //   '/Users/leefowler/Documents/VSCode/SDA8-webdev/reactsda/delivery-app/src/data/data.json';
-
-        // const data = await fetchPackages(endpoint).filter(
-        //   (value) => value.user_name === packageID
-        // );
 
         const response = await fetch(endpoint, { mode: 'cors' });
 
         // Once the information is downloaded we transformed it to json
         const data = await response.json();
 
-        const displayData = data.filter(
-          (value) => value.user_name === packageID
-        );
+        const displayData = data.filter((value) => value.user_name === user);
 
         console.log(`data : ${data}`);
         console.log(`displayData : ${displayData}`);
+
         setInformation(displayData);
         setStatus(1);
       } catch {
@@ -54,35 +46,62 @@ export default function Home() {
     }
 
     fetchData();
-  }, [packageID]);
+  }, [user]);
 
   return (
     <>
-      <div className="pageStyle">
-        <p> Welcome to Express Delivery Mr Jhon Doe </p>
+      <div className="websiteStyle">
+        <div className="introStyle">
+          <div>
+            <h2> Welcome to Express Delivery Jhon Doe </h2>
+          </div>
+          <div>
+            <p>
+              {' '}
+              If you are expecting a delivery please enter your name and click
+              the display packages button{' '}
+            </p>
+          </div>
+          <div>
+            <img
+              className="picture"
+              src={logo}
+              alt="a logo for the transport company called express delivery"
+            />
+          </div>
+          <div>
+            <p> Please enter the name of the package owner </p>
+          </div>
+          <div>
+            <input ref={inputUser} placeholder="try: Jhon Doe" />
+            <button
+              className="button"
+              onClick={() => {
+                const enteredUser = inputUser.current.value;
+                setUser(enteredUser);
+              }}
+            >
+              {' '}
+              display packages{' '}
+            </button>
+          </div>
+        </div>
 
-        <p>
-          {' '}
-          If you are expecting a delivery please enter your name and click the
-          display packages button{' '}
-        </p>
-        <img
-          className="picture"
-          src={logo}
-          alt="a logo for the transport company called express delivery"
-        />
-        <p> Please enter the name of the package owner </p>
-        <input ref={inputPackageRef} placeholder="try Jhon Doe" />
-        <button
-          className="button"
-          onClick={() => {
-            const pID = inputPackageRef.current.value;
-            setPackageID(pID);
-          }}
-        >
-          {' '}
-          display packages{' '}
-        </button>
+        <div className="packageStyle">
+          <div>
+            <h3>Packages will be displayed here: </h3>
+            <hr />
+          </div>
+
+
+          <div>
+            {status === 0 ? <p>Loading...</p> : null}
+            {status === 1 &&
+              information &&
+              information.map((item) => {
+                return (
+                  <div key={item.id}>
+                    {`Package status is ${item.status}
 
         <div>
 
@@ -99,12 +118,15 @@ export default function Home() {
               return (
                 <div key={item.id}>
                   {`Package status is ${item.status}
+
                    and its location is ${item.location_name}
                     and time of delivery is ${item.eta} with a waybill number of ${item.id}`}
-                </div>
-              );
-            })}
-          {status === 2 ? <p>Sorry we cannot find your package</p> : null}
+                    <p></p>
+                  </div>
+                );
+              })}
+            {status === 2 ? <p>Sorry we cannot find your package</p> : null}
+          </div>
         </div>
       </div>
     </>
