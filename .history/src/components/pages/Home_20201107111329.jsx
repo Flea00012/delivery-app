@@ -71,7 +71,7 @@ export default function Home() {
             information.map((i) => {
               return (
                 <div key={i.id}>
-                  {`Package current location is ${i.location_id} and time of delivery is ${i.eta}`}
+                  {`Package location is ${i.location_id} and time of delivery is ${i.eta}`}
                 </div>
               );
             })}

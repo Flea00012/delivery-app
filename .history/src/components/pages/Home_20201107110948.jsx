@@ -64,14 +64,14 @@ export default function Home() {
         />
 
         <div>
-          <h4>We are searching for your package, please be patient</h4>
+          <h4>Searching for your package, please be patient</h4>
           {status === 0 ? <p>Loading...</p> : null}
           {status === 1 &&
             information &&
             information.map((i) => {
               return (
                 <div key={i.id}>
-                  {`Package current location is ${i.location_id} and time of delivery is ${i.eta}`}
+                  {`Package location is ${i.location_id} and time of delivery is ${i.eta}`}
                 </div>
               );
             })}
