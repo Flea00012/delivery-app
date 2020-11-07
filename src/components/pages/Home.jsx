@@ -1,4 +1,8 @@
 //react core
+import { fetchPackages } from '../molecules/fetchPackages';
+
+import { fetchPackages } from '../molecules/CardReader';
+
 
 import { useEffect, useState, useRef } from 'react';
 
@@ -89,6 +93,7 @@ export default function Home() {
             <hr />
           </div>
 
+
           <div>
             {status === 0 ? <p>Loading...</p> : null}
             {status === 1 &&
@@ -97,6 +102,23 @@ export default function Home() {
                 return (
                   <div key={item.id}>
                     {`Package status is ${item.status}
+
+        <div>
+
+          <p>Packages will be displayed here: </p>
+
+          <h4x>Searching for your package, please be patient.</h4x>
+
+          <h4>We are searching for your package, please be patient</h4>
+
+          {status === 0 ? <p>Loading...</p> : null}
+          {status === 1 &&
+            information &&
+            information.map((item) => {
+              return (
+                <div key={item.id}>
+                  {`Package status is ${item.status}
+
                    and its location is ${item.location_name}
                     and time of delivery is ${item.eta} with a waybill number of ${item.id}`}
                     <p></p>
