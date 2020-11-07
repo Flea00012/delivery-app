@@ -1,5 +1,5 @@
 //react core
-import { fetchPackages } from '../molecules/CardReader';
+import { fetchPackages } from '../molecules/apiCallFunction';
 import { useEffect, useState, useRef } from 'react';
 
 //import styles and pictures
@@ -64,18 +64,14 @@ export default function Home() {
         />
 
         <div>
-<<<<<<< HEAD
-          <h4x>Searching for your package, please be patient.</h4x>
-=======
-          <h4>We are searching for your package, please be patient</h4>
->>>>>>> 2-fixTheSearchOnHomePage
+          <h4>Searching for your package, please be patient</h4>
           {status === 0 ? <p>Loading...</p> : null}
           {status === 1 &&
             information &&
             information.map((i) => {
               return (
                 <div key={i.id}>
-                  {`Package current location is ${i.location_id} and time of delivery is ${i.eta}`}
+                  {`Package location is ${i.location_id} and time of delivery is ${i.eta}`}
                 </div>
               );
             })}

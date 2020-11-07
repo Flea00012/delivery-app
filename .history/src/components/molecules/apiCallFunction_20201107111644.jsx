@@ -1,4 +1,4 @@
-//function fetchPackages() is used to do all the fetching of the data only and separate business logic from UI
+//function fetchPackages() is used to do all the fetching of the data only and
 export async function fetchPackages(endpoint) {
   try {
     // Make fetch request to obtain info from the endpoint URL address
@@ -13,3 +13,4 @@ export async function fetchPackages(endpoint) {
     throw err;
   }
 }
+
