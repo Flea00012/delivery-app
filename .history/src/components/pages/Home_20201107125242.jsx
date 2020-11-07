@@ -59,8 +59,8 @@ export default function Home() {
 
         <p>
           {' '}
-          If you are expecting a delivery please enter your name and click the
-          display packages button{' '}
+          If you are expecting a delivery please enter your name and click
+          the display packages button{' '}
         </p>
         <img
           className="picture"
@@ -94,7 +94,7 @@ export default function Home() {
                 </div>
               );
             })}
-          {status === 2 ? <p>Sorry we cannot find your package</p> : null}
+          {ststatus === 2 ? <p>Sorry we cannot find that package</p> : null}
         </div>
       </div>
     </>

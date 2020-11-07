@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@500&display=swap');
 
 
-p, div {
+p {
   font-family: Lato;
   font: black;
 
@@ -18,7 +18,6 @@ nav{
   min-height: 10px;
   top: 0px;
   font-size: 20px;
-  width: 100%;
 
 
 }
@@ -36,9 +35,8 @@ nav{
 .pageStyle{
   font: Lato;
   background-color: #63C5DA;
-  height: fit-content;
+  height: 800px;
   width: 100%;
-  padding: 20px;
 
 
 }
@@ -87,15 +85,14 @@ h5 {
 }
 
 .button {
-  background-color: #0492C2; /* Green */
+  background-color: na; /* Green */
   border: none;
   color: black;
-  margin: 20px;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 

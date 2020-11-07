@@ -94,7 +94,7 @@ export default function Home() {
                 </div>
               );
             })}
-          {status === 2 ? <p>Sorry we cannot find your package</p> : null}
+          {status === 2 ? <p>Sorry we cannot find that package</p> : null}
         </div>
       </div>
     </>

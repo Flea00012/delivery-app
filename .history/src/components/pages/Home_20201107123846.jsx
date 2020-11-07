@@ -59,29 +59,26 @@ export default function Home() {
 
         <p>
           {' '}
-          If you are expecting a delivery please enter your name and click the
-          display packages button{' '}
+          If you are expecting a delivery please enter your package ID and click
+          "find"{' '}
         </p>
         <img
           className="picture"
           src={logo}
           alt="a logo for the transport company called express delivery"
         />
-        <p> Please enter the name of the package owner </p>
-        <input ref={inputPackageRef} placeholder="try Jhon Doe" />
+        <p> Please enter your package ID below </p>
+        <input ref={inputPackageRef} placeholder="packageID" />
         <button
           className="button"
           onClick={() => {
             const pID = inputPackageRef.current.value;
             setPackageID(pID);
           }}
-        >
-          {' '}
-          display packages{' '}
-        </button>
+        />
 
         <div>
-          <p>Packages will be displayed here: </p>
+          <p>Packages will be di</p>
           {status === 0 ? <p>Loading...</p> : null}
           {status === 1 &&
             information &&
@@ -94,7 +91,7 @@ export default function Home() {
                 </div>
               );
             })}
-          {status === 2 ? <p>Sorry we cannot find your package</p> : null}
+          {status === 2 ? <p>Sorry we cannot find that package</p> : null}
         </div>
       </div>
     </>
