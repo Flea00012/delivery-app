@@ -37,7 +37,7 @@ The other pages for login are presently being built with a backend for Jhon Doe 
 
 ## Class Diagram
 
-![alt text](https://github.com/Flea00012/JavaLoggable/blob/master/Diagrams/Class%20Diagram-final.png)
+
 
 ## Contributing
 
